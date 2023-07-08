@@ -8,10 +8,6 @@ const circle = document.getElementById('circle')
 
 let numberRange
 
-const handler = (event) => {
-    changeColorSquare()
-}
-
 const inputRangeHandler = (event) => {
     spanRange.textContent = event.target.value
     numberRange = event.target.value
@@ -27,9 +23,10 @@ const changeColorSquare = () =>{
     square.style.background = input.value
 }
 
-btn.addEventListener('click', handler)
+btn.addEventListener('click', changeColorSquare)
 inputRange.addEventListener('input', inputRangeHandler)
 
+spanRange.textContent = 50
 eBtn.style.display = 'none'
 
 
